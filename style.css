@@ -1,0 +1,88 @@
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/27230.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+header{
+    position: relative;
+    text-align: center;
+}
+.quadrado{
+    display: inline;        /*configura a div como linha*/
+    width: 50px;
+    padding: 40px;
+    margin: 5px;
+
+    text-align: center;     /*centraliza o conteúdo*/
+    font-size: 60px;
+    color: #eee;
+    background: rgba(179, 176, 176, 0.479) ;
+    
+    cursor: pointer;        /*altera o cursor ao passar pela div*/
+
+    border-radius: 20px;
+    filter: blur(1px);
+}
+h1{
+    font-size: 18px;
+    
+}
+
+.quadrado-pai{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.jogador, .vencedor{        /*deve ser separado por vírgula*/
+    font-size: 23px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 900;
+}
+
+button{
+    margin-top:10px;
+    font-size: 23px;
+    width: 150px;
+    height: 30px;
+    background: rgb(117, 119, 122);
+    border: #eee;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background: rgb(77, 219, 34);
+    transform: scale(1.06);
+    transition: 0.5s;
+}
+
+/*--------------ANIMATIONS---------------------*/
+.waves{
+    position: absolute;
+    z-index: -5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.wave1{
+    animation: moveWave1 3s ease-in-out infinite alternate;
+}
+.wave2{
+    animation: moveWave1 2s ease-in-out infinite alternate;
+}
+.wave3{
+    animation: moveWave1 1.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes moveWave1{
+    from{
+        transform: translateX(40px)
+    }
+}
+}
